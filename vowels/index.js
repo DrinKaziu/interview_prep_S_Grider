@@ -7,6 +7,22 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+// function vowels(str) {
+  let vowels = 'aeiouAEIOU'.split('');
+  let count = 0; 
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.indexOf(str[i]) !== -1) {
+      count++; 
+    }
+  }
+
+  return count; 
+}
+
+// regEx Solution 
+// function vowels(str) {
+//   const matches = str.match(/[aeiou]/gi);
+//   return matches ? matches.length : 0; 
+// }
 
 module.exports = vowels;
